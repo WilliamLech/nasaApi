@@ -1,11 +1,14 @@
 @if(!!images){
   <div class="carousel">
-    @for(item of images; track item?.id){
+    @for(item of images; track item?.id; let i = $index){
       <ng-container>
-        <img
-          [src]="item?.img_src"
-          class="slide"
-        />
+        @if(i === $index){
+          <img
+            [src]="item?.img_src"
+            class="slide"
+          />
+        }
+
       </ng-container>
     }
 
