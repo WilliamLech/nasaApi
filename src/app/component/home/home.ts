@@ -25,9 +25,9 @@ export class Home {
   }
 
   public getNasaAPiImage(){
-   /* this.nasaApi.getImageDuJour().pipe(first()).subscribe(data => {
+    this.nasaApi.getImageDuJour().pipe(first()).subscribe(data => {
       console.log(data);
       this.nasaImage.next(data);
-    })*/
+    })
   }
 }

@@ -4,5 +4,16 @@
       <input type="number" [(ngModel)]="sol">
       <button (click)="search()">Search</button>
     </div>
-    <app-carrousel [images]="marsImage | async"></app-carrousel>
+
+    @if(marsImage | async){
+      <owl-carousel-o [options]="customOptions">
+
+        @for (slide of (marsImage | async); track slide.id) {
+          <ng-template carouselSlide [width]="500">
+            <img [src]="slide.img_src">
+          </ng-template>
+        }
+
+      </owl-carousel-o>
+    }
 </div>
