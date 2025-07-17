@@ -1,0 +1,13 @@
+<div class="flex gap-2 flex-col background">
+  <mat-toolbar color="primary">
+    <span [routerLink]="'/'" class="cursor-pointer font-bold">Home</span>
+    <span [routerLink]="'/marsImage'" class="cursor-pointer">Mars Images</span>
+  </mat-toolbar>
+
+  <div class="flex flex-col w-full gap-5 justify-center items-center">
+    <div class="w-full text-center">
+      <img class="block w-5xl m-auto" src="{{(nasaImage | async)?.hdurl}}" alt="{{(nasaImage | async)?.explanation}}">
+    </div>
+    <div class="text-2xl text-justify">{{(nasaImage | async)?.explanation}}</div>
+  </div>
+</div>
