@@ -1,0 +1,8 @@
+<div class="flex gap-2 flex-col">
+  <app-toolbar></app-toolbar>
+    <div class="flex flex-row gap-2">
+      <input type="number" [(ngModel)]="sol">
+      <button (click)="search()">Search</button>
+    </div>
+    <app-carrousel [images]="marsImage | async"></app-carrousel>
+</div>

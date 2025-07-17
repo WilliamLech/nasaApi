@@ -1,17 +1,17 @@
 import { Component } from '@angular/core';
 import {MatToolbar} from '@angular/material/toolbar';
 import {RouterLink} from '@angular/router';
-import {NasaApi} from '../api/nasa.api';
+import {NasaApi} from '../../api/nasa.api';
 import {BehaviorSubject, first} from 'rxjs';
-import {NasaImage} from '../class/NasaImage.model';
+import {NasaImage} from '../../class/NasaImage.model';
 import {AsyncPipe} from '@angular/common';
+import {Toolbar} from '../toolbar/toolbar';
 
 @Component({
   selector: 'app-home',
   imports: [
-    MatToolbar,
-    RouterLink,
     AsyncPipe,
+    Toolbar,
   ],
   templateUrl: './home.html',
   styleUrl: './home.css'
