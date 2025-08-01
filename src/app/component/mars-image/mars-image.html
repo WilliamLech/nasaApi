@@ -1,19 +1,26 @@
 <div class="flex gap-2 flex-col">
   <app-toolbar></app-toolbar>
     <div class="flex flex-row gap-2">
-      <input type="number" [(ngModel)]="sol">
+      <mat-form-field>
+        <mat-label>Sol</mat-label>
+        <input type="number" [(ngModel)]="sol">
+      </mat-form-field>
       <button (click)="search()">Search</button>
     </div>
 
     @if(marsImage | async){
-      <owl-carousel-o [options]="customOptions" >
+      <div class="text-center">
+        <owl-carousel-o [options]="customOptions" >
 
           @for (slide of (marsImage | async); track slide.id) {
             <ng-template carouselSlide>
-              <img style="height: 800px; width: 1000px; text-align: center" [src]="slide.img_src">
+              <div class="image-container">
+                  <img class="centered-image" [src]="slide.img_src" alt="Mars Image">
+              </div>
             </ng-template>
           }
 
         </owl-carousel-o>
+      </div>
     }
 </div>

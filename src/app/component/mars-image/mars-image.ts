@@ -6,6 +6,7 @@ import {BehaviorSubject} from 'rxjs';
 import {AsyncPipe} from '@angular/common';
 import {MarsImageModel} from '../../class/MarsiImage.model';
 import {CarouselModule, OwlOptions} from 'ngx-owl-carousel-o';
+import {MatFormField, MatLabel} from '@angular/material/input';
 
 @Component({
   selector: 'app-mars-image',
@@ -13,7 +14,9 @@ import {CarouselModule, OwlOptions} from 'ngx-owl-carousel-o';
     Toolbar,
     FormsModule,
     AsyncPipe,
-    CarouselModule
+    CarouselModule,
+    MatFormField,
+    MatLabel,
   ],
   templateUrl: './mars-image.html',
   styleUrl: './mars-image.css'
@@ -28,8 +31,8 @@ export class MarsImage {
     pullDrag: true,
     dots: true,
     autoplay: true,
-    autoplayTimeout: 3600,
-    autoplaySpeed: 2400,
+    autoplayTimeout: 10600,
+    autoplaySpeed: 6400,
     navSpeed: 700,
     navText: ['', ''],
     responsive: {
@@ -43,6 +46,15 @@ export class MarsImage {
         items: 1
       },
       940: {
+        items: 1
+      },
+      1000: {
+        items: 1
+      },
+      1200: {
+        items: 1
+      },
+      1900:{
         items: 1
       }
     },

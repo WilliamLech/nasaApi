@@ -1,0 +1,14 @@
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 770px; /* La hauteur du conteneur d'image et du carrousel */
+  width: 100%;   /* Adapter à la largeur du carrousel */
+  overflow: hidden; /* Pour s'assurer que rien ne dépasse */
+}
+
+.centered-image {
+  max-height: 100%; /* Assure que l'image ne dépasse pas */
+  max-width: 100%;  /* Assure que l'image reste responsive */
+  object-fit: contain; /* S'assure que toute l'image est visible */
+}
