@@ -3,3 +3,7 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.backgroundGradient{
+  background-image: linear-gradient(to bottom, #845ec2, #8350c4, #8240c4, #832bc4, #8400c2);
+}
