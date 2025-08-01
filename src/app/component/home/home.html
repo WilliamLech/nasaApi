@@ -5,5 +5,7 @@
       <img class="block w-5xl m-auto" src="{{(nasaImage | async)?.hdurl}}" alt="{{(nasaImage | async)?.explanation}}">
     </div>
     <div class="text-2xl text-justify max-w-7xl text-white">{{(nasaImage | async)?.explanation}}</div>
+    <div class="text-2xl text-justify max-w-7xl text-white">Copyright : {{(nasaImage | async)?.copyright}}</div>
+    <div class="text-2xl text-justify max-w-7xl text-white">Date :  {{(nasaImage | async)?.date}}</div>
   </div>
 </div>

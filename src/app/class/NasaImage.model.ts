@@ -6,9 +6,10 @@ export class NasaImage {
   private _service_version: string | undefined;
   private _title: string | undefined;
   private _url: string | undefined;
+  private _copyright: string | undefined;
 
 
-  constructor(date?: Date, explanation?: string, hdurl?: string, media_type?: string, service_version?: string, title?: string, url?: string) {
+  constructor(date?: Date, explanation?: string, hdurl?: string, media_type?: string, service_version?: string, title?: string, url?: string, copyright?: string) {
     this._date = date;
     this._explanation = explanation;
     this._hdurl = hdurl;
@@ -16,6 +17,7 @@ export class NasaImage {
     this._service_version = service_version;
     this._title = title;
     this._url = url;
+    this._copyright = copyright;
   }
 
 
@@ -73,5 +75,13 @@ export class NasaImage {
 
   set url(value: string | undefined) {
     this._url = value;
+  }
+
+  get copyright(): string | undefined {
+    return this._copyright;
+  }
+
+  set copyright(value: string | undefined) {
+    this._copyright = value;
   }
 }
