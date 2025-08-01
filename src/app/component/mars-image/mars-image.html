@@ -6,14 +6,14 @@
     </div>
 
     @if(marsImage | async){
-      <owl-carousel-o [options]="customOptions">
+      <owl-carousel-o [options]="customOptions" >
 
-        @for (slide of (marsImage | async); track slide.id) {
-          <ng-template carouselSlide [width]="500">
-            <img [src]="slide.img_src">
-          </ng-template>
-        }
+          @for (slide of (marsImage | async); track slide.id) {
+            <ng-template carouselSlide>
+              <img style="height: 800px; width: 1000px; text-align: center" [src]="slide.img_src">
+            </ng-template>
+          }
 
-      </owl-carousel-o>
+        </owl-carousel-o>
     }
 </div>

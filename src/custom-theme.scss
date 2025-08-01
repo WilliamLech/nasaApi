@@ -1,16 +1,46 @@
 @use '@angular/material' as mat;
 @include mat.core();
 
-$myapp-theme-primary: mat.m2-define-palette(mat.$m2-purple-palette, A400, A100, A700);
-$myapp-theme-accent: mat.m2-define-palette(mat.$m2-red-palette);
-$myapp-theme-warn: mat.m2-define-palette(mat.$m2-pink-palette, A200, A100, A400);
-
-$myapp-theme: mat.m2-define-light-theme((
-  color: (
-    primary: $myapp-theme-primary,
-    accent: $myapp-theme-accent,
-    warn: $myapp-theme-warn,
+// Déclaration des palettes
+$primary-palette: mat.m2-define-palette((
+  100: #e0d4f8, // Ajout de la nuance 100
+  500: #845ec2,
+  700: #5d3fae,
+  contrast: (
+    100: black, // Contraste associé à la nuance 100
+    500: white
   )
 ));
 
-@include mat.all-component-themes($myapp-theme);
+$accent-palette: mat.m2-define-palette((
+  100: #f3e8ff, // Ajout pour accent
+  500: #c197ff,
+  700: #9b81e8,
+  contrast: (
+    100: black,
+    500: black
+  )
+));
+
+$warn-palette: mat.m2-define-palette((
+  100: #ffc8c3, // Ajout pour avertissement
+  500: #cf3d2a,
+  700: #a8311d,
+  contrast: (
+    100: white,
+    500: white
+  )
+));
+
+// Configuration du thème global
+$theme: mat.m2-define-light-theme((
+  color: (
+    primary: $primary-palette,
+    accent: $accent-palette,
+    warn: $warn-palette,
+  ),
+  typography: mat.m2-define-typography-config(),
+));
+
+// Application du thème aux composants Angular Material
+@include mat.all-component-themes($theme);

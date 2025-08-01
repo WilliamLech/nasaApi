@@ -23,10 +23,13 @@ export class MarsImage {
   marsImage: BehaviorSubject<MarsImageModel[] | undefined> = new BehaviorSubject<MarsImageModel[] |undefined>(undefined);
   customOptions: OwlOptions = {
     loop: true,
-    mouseDrag: false,
-    touchDrag: false,
-    pullDrag: false,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
     dots: true,
+    autoplay: true,
+    autoplayTimeout: 3600,
+    autoplaySpeed: 2400,
     navSpeed: 700,
     navText: ['', ''],
     responsive: {
