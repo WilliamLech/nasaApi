@@ -5,5 +5,5 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .backgroundGradient{
-  background-image: linear-gradient(to bottom, #845ec2, #8350c4, #8240c4, #832bc4, #8400c2);
+  background-image: linear-gradient(to bottom, #898989, #656565, #434343, #242424, #000000);
 }
