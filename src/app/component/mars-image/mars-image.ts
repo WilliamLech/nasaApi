@@ -6,7 +6,8 @@ import {BehaviorSubject} from 'rxjs';
 import {AsyncPipe} from '@angular/common';
 import {MarsImageModel} from '../../class/MarsiImage.model';
 import {CarouselModule, OwlOptions} from 'ngx-owl-carousel-o';
-import {MatFormField, MatLabel} from '@angular/material/input';
+import {MatFormField, MatInput, MatLabel} from '@angular/material/input';
+import {MatButton} from '@angular/material/button';
 
 @Component({
   selector: 'app-mars-image',
@@ -17,9 +18,11 @@ import {MatFormField, MatLabel} from '@angular/material/input';
     CarouselModule,
     MatFormField,
     MatLabel,
+    MatInput,
+    MatButton,
   ],
   templateUrl: './mars-image.html',
-  styleUrl: './mars-image.css'
+  styleUrl: './mars-image.scss'
 })
 export class MarsImage {
   sol: number = 1000;

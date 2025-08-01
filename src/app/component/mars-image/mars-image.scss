@@ -1,8 +1,17 @@
+@use '@angular/material' as mat;
+
+// Customize the entire app. Change :root to your selector if you want to scope the styles.
+   :root {
+     @include mat.button-overrides((
+       outlined-label-text-color: white,
+     ));
+   }
+
 .image-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 770px; /* La hauteur du conteneur d'image et du carrousel */
+  height: 720px; /* La hauteur du conteneur d'image et du carrousel */
   width: 100%;   /* Adapter à la largeur du carrousel */
   overflow: hidden; /* Pour s'assurer que rien ne dépasse */
 }
@@ -12,3 +21,4 @@
   max-width: 100%;  /* Assure que l'image reste responsive */
   object-fit: contain; /* S'assure que toute l'image est visible */
 }
+
