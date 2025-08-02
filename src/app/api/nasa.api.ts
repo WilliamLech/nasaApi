@@ -7,7 +7,7 @@ import {MarsPhoto} from '../class/MarsPhoto.model';
 @Injectable({providedIn: 'root'})
 export class NasaApi {
   private http = inject(HttpClient);
-  private key = "T0AqdBS45KjlxyOSWP9LK5gAxafYkp1N6zzXddij" //"DEMO_KEY"
+  private key ="DEMO_KEY"
 
   public getImageDuJour(): Observable<NasaImage>{
     return this.http.get('https://api.nasa.gov/planetary/apod?api_key=' + this.key) as Observable<NasaImage>;
